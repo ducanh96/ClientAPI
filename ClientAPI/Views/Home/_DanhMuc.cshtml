@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ClientAPI.Models.ViewModelLocationPrize>
+<ul class="nav nav-list">
+    <li class="">
+        <a href="index.html">
+            <i class="menu-icon fa fa-tachometer"></i>
+            <span class="menu-text"> Home </span>
+        </a>
+
+        <b class="arrow"></b>
+    </li>
+    @foreach (var item in Model)
+    {
+        <li class="">
+            <a href="index.html">
+                <i class="menu-icon fa fa-tachometer"></i>
+                <span class="menu-text"> @item.LottezyName </span>
+            </a>
+
+            <b class="arrow"></b>
+        </li>
+    }
+
+
+</ul><!-- /.nav-list -->
