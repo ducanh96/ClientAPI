@@ -22,10 +22,7 @@ namespace ClientAPI.Models
         public List<string> SeventhPrize { get; set; }
         public List<string> SpecialPrize { get; set; }
 
-        public ViewModelPrize()
-        {
-
-        }
+        
  
     }
     

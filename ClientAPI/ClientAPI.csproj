@@ -234,6 +234,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ResponseLottezy.cs" />
     <Compile Include="Models\ResponseLocationPrize.cs" />
     <Compile Include="Models\ViewModelLocationPrize.cs" />
     <Compile Include="Models\ViewModelPrize.cs" />
@@ -254,6 +255,7 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_DanhMuc.cshtml" />
+    <Content Include="Views\Home\CreatePrize.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
