@@ -251,5 +251,12 @@ namespace ClientAPI.Controllers
             return View();
 
         }
+        [HttpGet]
+        public ActionResult HomeHome()
+        {
+
+            return View();
+
+        }
     }
 }
