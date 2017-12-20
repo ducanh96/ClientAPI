@@ -15,7 +15,7 @@
             </div>
             <div class="col-xs-8">
                 <div>
-                    <span>@Model.SpecialPrize.FirstOrDefault()</span>
+                    <span>@Model.Special.FirstOrDefault()</span>
                 </div>
             </div>
             <div class="col-xs-2">
@@ -26,16 +26,15 @@
             <div class="col-xs-2">
                 <label>Giải Nhất</label>
             </div>
-            @foreach (var item in @Model.FirstPrize)
-            {
+            
                 <div class="col-xs-8">
                     <div>
-                        <span>@item</span>
+                        <span>@Model.First.FirstOrDefault()</span>
                     </div>
                 </div>
 
 
-            }
+           
             <div class="col-xs-2">
             </div>
         </div>
@@ -44,7 +43,7 @@
             <div class="col-xs-2">
                 <label>Giải Nhì</label>
             </div>
-            @foreach (var item in @Model.SecondPrize)
+            @foreach (var item in @Model.Second)
             {
                 <div class="col-xs-4">
                     <div>
@@ -59,7 +58,7 @@
             <div class="col-xs-2">
                 <label>Giải Ba</label>
             </div>
-            @foreach (var item in @Model.ThirdPrize)
+            @foreach (var item in @Model.Third)
             {
                 <div class="col-xs-2" style="width:107px">
                     <div>
@@ -74,7 +73,7 @@
             <div class="col-xs-2">
                 <label>Giải Tư</label>
             </div>
-            @foreach (var item in @Model.FourthPrize)
+            @foreach (var item in @Model.Fourth)
             {
                 <div class="col-xs-2">
                     <div>
@@ -88,7 +87,7 @@
             <div class="col-xs-2">
                 <label>Giải Năm</label>
             </div>
-            @foreach (var item in @Model.FifthPrize)
+            @foreach (var item in @Model.Fifth)
             {
                 <div class="col-xs-2" style="width:107px">
                     <div>
@@ -102,7 +101,7 @@
             <div class="col-xs-2">
                 <label>Giải Sáu</label>
             </div>
-            @foreach (var item in @Model.SixthPrize)
+            @foreach (var item in @Model.Sixth)
             {
                 <div class="col-xs-3" style="width:214px ;">
                     <div>
@@ -116,7 +115,7 @@
             <div class="col-xs-2">
                 <label>Giải Bảy</label>
             </div>
-            @foreach (var item in @Model.SeventhPrize)
+            @foreach (var item in @Model.Seventh)
             {
                 <div class="col-xs-2">
                     <div>
@@ -130,4 +129,5 @@
 
 
     </div>
+    <a href="@Url.Action("SXMN","Home")" class="btn btn-danger"> Đầy đủ</a>
 </form>

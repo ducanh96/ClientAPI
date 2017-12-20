@@ -1,0 +1,71 @@
+﻿@model List<ClientAPI.Models.ViewModelStatiscal>
+
+
+<table class="table table-bordered table-striped">
+<thead class="thin-border-bottom">
+    <tr>
+        <th>
+            <i class="ace-icon fa fa-caret-right blue"></i>Cặp số
+        </th>
+
+        <th>
+            <i class="ace-icon fa fa-caret-right blue"></i>Xuất hiện
+        </th>
+
+        <th class="hidden-480">
+            <i class="ace-icon fa fa-caret-right blue"></i>Cặp số
+        </th>
+        <th class="hidden-480">
+            <i class="ace-icon fa fa-caret-right blue"></i>Xuất hiện
+        </th>
+    </tr>
+</thead>
+
+<tbody>
+
+    @for (int i = 0; i < Model.Count / 2; i++)
+    {
+
+        <tr>
+            <td>@Model[i].number</td>
+
+            <td>
+
+                <b class="green">@Model[i].fed</b>
+            </td>
+
+            <td>@Model[i + Model.Count / 2].number</td>
+
+            <td>
+
+                <b class="green">@Model[i + Model.Count / 2].fed</b>
+            </td>
+            <
+        </tr>
+
+    }
+    @if (Model.Count % 2 != 0)
+    {
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+
+                <b class="green">@Model[Model.Count - 1].number</b>
+            <td>
+
+                <b class="green">@Model[Model.Count - 1].fed</b>
+            </td>
+
+        </tr>
+    }
+
+
+
+
+
+
+
+</tbody>
+</table>
+

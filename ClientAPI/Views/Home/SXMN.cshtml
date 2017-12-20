@@ -1,7 +1,135 @@
-﻿
+﻿@model ClientAPI.Models.ViewModelPrize
 @{
     ViewBag.Title = "SXMN";
+    Layout = "~/Views/_Layout.cshtml";
 }
 
-<h2>SXMN</h2>
+
+<form action="SXMN" method="post">
+    <input type="date" name="date" style="margin-left: 367px;" value="@ViewBag.date" class="nav-search-input center" id="nav-search-input" autocomplete="off" />
+    <button class="btn-primary" type="submit" style="width:50px;height:30px" value="Tìm Kiếm">Tìm</button>
+    <div class="center">
+        <div class="row">
+            <div class="col-xs-2">
+                <label style="color:red">Giải Đặc Biệt</label>
+            </div>
+            <div class="col-xs-8">
+                <div>
+                    <span>@Model.SpecialPrize.FirstOrDefault()</span>
+                </div>
+            </div>
+            <div class="col-xs-2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <label>Giải Nhất</label>
+            </div>
+            @foreach (var item in @Model.FirstPrize)
+            {
+        <div class="col-xs-8">
+            <div>
+                <span>@item</span>
+            </div>
+        </div>
+
+
+            }
+            <div class="col-xs-2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <label>Giải Nhì</label>
+            </div>
+@foreach (var item in @Model.SecondPrize)
+{
+            <div class="col-xs-4" >
+                <div>
+                    <span>@item</span>
+                </div>
+            </div>
+           
+}
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <label>Giải Ba</label>
+            </div>
+@foreach (var item in @Model.ThirdPrize)
+{
+            <div class="col-xs-2" style="width:107px">
+                <div>
+                    <span>@item</span>
+                </div>
+            </div>
+            
+}
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <label>Giải Tư</label>
+            </div>
+@foreach (var item in @Model.FourthPrize)
+{
+            <div class="col-xs-2">
+                <div>
+                    <span>@item</span>
+                </div>
+            </div>
+}
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <label>Giải Năm</label>
+            </div>
+@foreach (var item in @Model.FifthPrize)
+{
+            <div class="col-xs-2" style="width:107px">
+                <div>
+                    <span>@item</span>
+                </div>
+            </div>
+}
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2" >
+                <label>Giải Sáu</label>
+            </div>
+@foreach (var item in @Model.SixthPrize)
+{
+            <div class="col-xs-3" style="width:214px ;">
+                <div>
+                    <span>@item</span>
+                </div>
+            </div>
+}
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <label>Giải Bảy</label>
+            </div>
+@foreach (var item in @Model.SeventhPrize)
+{
+            <div class="col-xs-2">
+                <div>
+                    <span>@item</span>
+                </div>
+            </div>
+}
+        </div>
+
+
+
+
+    </div>
+    <a href="@Url.Action("SXMN_TachCuoi","Home")" class="btn btn-danger"> 2 số</a>
+</form>
 

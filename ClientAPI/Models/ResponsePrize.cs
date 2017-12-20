@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ClientAPI.Models
 {
-    public class ResponseLottezy
+    public class ResponsePrize
     {
         public int code { get; set; }
         public ViewModelPrize data { get; set; }

@@ -1,0 +1,17 @@
+﻿@model List<ClientAPI.Models.ViewModelStatiscal>
+@{
+    ViewBag.Title = "ThongKe";
+    Layout = "~/Views/_Layout.cshtml";
+
+    
+}
+
+<form action="ThongKe" method="post">
+    <input type="date" name="from" value="@ViewBag.from" class="nav-search-input center" id="nav-search-input" autocomplete="off" />
+    <input type="date" name="to" value="@ViewBag.to" class="nav-search-input" id="nav-search-input" autocomplete="off" />
+    <button class="btn-primary" type="submit" style="width:50px;height:30px" value="Tìm Kiếm">Tìm</button>
+ </form>
+@if (Model != null)
+{
+@Html.Partial("_PartialThongKe", Model)
+    }
