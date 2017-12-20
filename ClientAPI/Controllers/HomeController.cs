@@ -45,6 +45,11 @@ namespace ClientAPI.Controllers
             return View();
         }
 
+        public ActionResult NotFound()
+        {
+            return View();
+        }
+
 
         public ActionResult EditPrize(string date="2017-12-20")
         {
@@ -369,7 +374,7 @@ namespace ClientAPI.Controllers
 
         }
         [HttpGet]
-        public ActionResult SXMN(int id=2)
+        public ActionResult SXMN(string date, int tam=0, int id=1)
         {
             
                 using (var cliet = new HttpClient())
@@ -378,20 +383,25 @@ namespace ClientAPI.Controllers
                     cliet.BaseAddress = new Uri("http://localhost:50132/");
 
                     cliet.DefaultRequestHeaders.Accept.Clear();
-                    cliet.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                    cliet.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));     
                     var response = cliet.GetAsync(string.Format("lottezy/{0}", id));
+                    if(date != null)
+                {
+                    response = cliet.GetAsync(string.Format("lottezy/{0}?date={1}", id, date));
+                }
                     response.Wait();
-
+                    
                     var result = response.Result;
                     if (result.IsSuccessStatusCode)
                     {
                         var KQ = result.Content.ReadAsAsync<ResponsePrize>();
-
+                        
                         KQ.Wait();
                         ResponsePrize res = KQ.Result;
                         if (res.code == 0)
                         {
                             ViewModelPrize kq = res.data;
+                        ViewBag.date = kq.date;
                             return View(kq);
                         }
 
@@ -404,7 +414,7 @@ namespace ClientAPI.Controllers
             
         }
         [HttpPost]
-        public ActionResult SXMN(string date)
+        public ActionResult SXMN(string date,int prizeLocationId)
         {
    
         ViewBag.date = date;
@@ -415,7 +425,7 @@ namespace ClientAPI.Controllers
 
                 cliet.DefaultRequestHeaders.Accept.Clear();
                 cliet.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                var response = cliet.GetAsync(string.Format("lottezy/1?date={0}",date));
+                var response = cliet.GetAsync(string.Format("lottezy/{0}?date={1}",prizeLocationId,date));
                 response.Wait();
 
                 var result = response.Result;
@@ -430,20 +440,26 @@ namespace ClientAPI.Controllers
                         ViewModelPrize kq = res.data;
                         return View(kq);
                     }
+                    else
+                    {
+
+                        return View("NotFound");
+                    }
                     
                    
                 }
-
+                return View("NotFound");
             }
             
           
-            return View();
+         
         }
         [HttpGet]
-        public ActionResult SXMN_TachCuoi(string date)
+        public ActionResult SXMN_TachCuoi(string date,int prizeLocationId)
         {
 
             ViewBag.date = date;
+            
             using (var cliet = new HttpClient())
             {
 
@@ -451,7 +467,7 @@ namespace ClientAPI.Controllers
 
                 cliet.DefaultRequestHeaders.Accept.Clear();
                 cliet.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                var response = cliet.GetAsync("lottezy/1");
+                var response = cliet.GetAsync(string.Format("lottezy/{0}?date={1}",prizeLocationId, date));
                 response.Wait();
 
                 var result = response.Result;

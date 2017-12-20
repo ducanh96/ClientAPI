@@ -7,6 +7,7 @@
 
 <form action="SXMN" method="post">
     <input type="date" name="date" style="margin-left: 367px;" value="@ViewBag.date" class="nav-search-input center" id="nav-search-input" autocomplete="off" />
+    <input type="hidden" name="prizeLocationId" value="@Model.LottezyId" />
     <button class="btn-primary" type="submit" style="width:50px;height:30px" value="Tìm Kiếm">Tìm</button>
     <div class="center">
         <div class="row">
@@ -130,6 +131,6 @@
 
 
     </div>
-    <a href="@Url.Action("SXMN_TachCuoi","Home")" class="btn btn-danger"> 2 số</a>
+    <a href="@Url.Action("SXMN_TachCuoi","Home",new {date = Model.date,prizeLocationId = Model.LottezyId })" class="btn btn-danger"> 2 số</a>
 </form>
 

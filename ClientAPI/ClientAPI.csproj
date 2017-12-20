@@ -288,6 +288,7 @@
     <Content Include="Views\Home\SXMN_TachCuoi.cshtml" />
     <Content Include="Views\Home\CreatePrize.cshtml" />
     <Content Include="Views\Home\EditPrize.cshtml" />
+    <Content Include="Views\Home\NotFound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
