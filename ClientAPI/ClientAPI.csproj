@@ -226,6 +226,7 @@
     <Content Include="Content\assets\js\tree.min.js" />
     <Content Include="Content\assets\js\wizard.min.js" />
     <Content Include="Content\assets\swf\flashExport.swf" />
+    <Content Include="Content\assets\tải xuống.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -286,8 +287,9 @@
     <Content Include="Views\Home\ThongKe.cshtml" />
     <Content Include="Views\Home\_PartialThongKe.cshtml" />
     <Content Include="Views\Home\SXMN_TachCuoi.cshtml" />
-    <Content Include="Views\Home\CreatePrize.cshtml" />
+    <Content Include="Views\Home\HomeHome.cshtml" />
     <Content Include="Views\Home\EditPrize.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\NotFound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

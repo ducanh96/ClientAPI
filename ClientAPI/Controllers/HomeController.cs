@@ -531,5 +531,17 @@ namespace ClientAPI.Controllers
             return View();
 
         }
+        [HttpGet]
+        public ActionResult HomeHome()
+        {
+
+            return View();
+
+        }
+        [HttpPost]
+        public ActionResult Login(string username,string pass)
+        {
+            return View();
+        }
     }
 }

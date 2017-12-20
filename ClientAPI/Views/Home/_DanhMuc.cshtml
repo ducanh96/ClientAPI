@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ClientAPI.Models.ViewModelLocationPrize>
 <ul class="nav nav-list">
     <li class="">
-        <a href="index.html">
+        <a href="@Url.Action("HomeHome","Home")">
             <i class="menu-icon fa fa-tachometer"></i>
             <span class="menu-text"> Home </span>
         </a>
@@ -23,6 +23,14 @@
         <a href="@Url.Action("ThongKe","Home")">
             <i class="menu-icon fa fa-tachometer"></i>
             <span class="menu-text"> Thống Kê SXMB </span>
+        </a>
+
+        <b class="arrow"></b>
+    </li>
+    <li class="">
+        <a href="@Url.Action("Login","Home")">
+            <i class="menu-icon fa fa-tachometer"></i>
+            <span class="menu-text"> Quản lí kết quả</span>
         </a>
 
         <b class="arrow"></b>
