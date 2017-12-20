@@ -11,7 +11,7 @@
     @foreach (var item in Model)
     {
         <li class="">
-            <a href="index.html">
+            <a href="@Url.Action("SXMN", "Home",new { id=@item.LottezyId})">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> @item.LottezyName </span>
             </a>
@@ -19,6 +19,13 @@
             <b class="arrow"></b>
         </li>
     }
+    <li class="">
+        <a href="@Url.Action("ThongKe","Home")">
+            <i class="menu-icon fa fa-tachometer"></i>
+            <span class="menu-text"> Thống Kê SXMB </span>
+        </a>
 
+        <b class="arrow"></b>
+    </li>
 
 </ul><!-- /.nav-list -->

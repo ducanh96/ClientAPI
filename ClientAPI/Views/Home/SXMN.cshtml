@@ -28,11 +28,11 @@
             </div>
             @foreach (var item in @Model.FirstPrize)
             {
-                <div class="col-xs-8">
-                    <div>
-                        <span>@item</span>
-                    </div>
-                </div>
+        <div class="col-xs-8">
+            <div>
+                <span>@item</span>
+            </div>
+        </div>
 
 
             }
@@ -44,90 +44,92 @@
             <div class="col-xs-2">
                 <label>Giải Nhì</label>
             </div>
-            @foreach (var item in @Model.SecondPrize)
-            {
-                <div class="col-xs-4">
-                    <div>
-                        <span>@item</span>
-                    </div>
+@foreach (var item in @Model.SecondPrize)
+{
+            <div class="col-xs-4" >
+                <div>
+                    <span>@item</span>
                 </div>
-
-            }
+            </div>
+           
+}
         </div>
 
         <div class="row">
             <div class="col-xs-2">
                 <label>Giải Ba</label>
             </div>
-            @foreach (var item in @Model.ThirdPrize)
-            {
-                <div class="col-xs-2" style="width:107px">
-                    <div>
-                        <span>@item</span>
-                    </div>
+@foreach (var item in @Model.ThirdPrize)
+{
+            <div class="col-xs-2" style="width:107px">
+                <div>
+                    <span>@item</span>
                 </div>
-
-            }
+            </div>
+            
+}
         </div>
 
         <div class="row">
             <div class="col-xs-2">
                 <label>Giải Tư</label>
             </div>
-            @foreach (var item in @Model.FourthPrize)
-            {
-                <div class="col-xs-2">
-                    <div>
-                        <span>43</span>
-                    </div>
+@foreach (var item in @Model.FourthPrize)
+{
+            <div class="col-xs-2">
+                <div>
+                    <span>@item</span>
                 </div>
-            }
+            </div>
+}
         </div>
 
         <div class="row">
             <div class="col-xs-2">
                 <label>Giải Năm</label>
             </div>
-            @foreach (var item in @Model.FifthPrize)
-            {
-                <div class="col-xs-2" style="width:107px">
-                    <div>
-                        <span>@item</span>
-                    </div>
+@foreach (var item in @Model.FifthPrize)
+{
+            <div class="col-xs-2" style="width:107px">
+                <div>
+                    <span>@item</span>
                 </div>
-            }
+            </div>
+}
         </div>
 
         <div class="row">
-            <div class="col-xs-2">
+            <div class="col-xs-2" >
                 <label>Giải Sáu</label>
             </div>
-            @foreach (var item in @Model.SixthPrize)
-            {
-                <div class="col-xs-3" style="width:214px ;">
-                    <div>
-                        <span>@item</span>
-                    </div>
+@foreach (var item in @Model.SixthPrize)
+{
+            <div class="col-xs-3" style="width:214px ;">
+                <div>
+                    <span>@item</span>
                 </div>
-            }
+            </div>
+}
         </div>
 
         <div class="row">
             <div class="col-xs-2">
                 <label>Giải Bảy</label>
             </div>
-            @foreach (var item in @Model.SeventhPrize)
-            {
-                <div class="col-xs-2">
-                    <div>
-                        <span>@item</span>
-                    </div>
+@foreach (var item in @Model.SeventhPrize)
+{
+            <div class="col-xs-2">
+                <div>
+                    <span>@item</span>
                 </div>
-            }
+            </div>
+}
         </div>
 
 
 
 
     </div>
+    <a href="@Url.Action("SXMN_TachCuoi","Home")" class="btn btn-danger"> 2 số</a>
 </form>
+
