@@ -246,6 +246,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreatePrizeModel.cs" />
+    <Compile Include="Models\DetailPrize\FifthPrize.cs" />
+    <Compile Include="Models\DetailPrize\FirstPrize.cs" />
+    <Compile Include="Models\DetailPrize\FourthPrize.cs" />
+    <Compile Include="Models\DetailPrize\SecondPrize.cs" />
+    <Compile Include="Models\DetailPrize\SeventhPrize.cs" />
+    <Compile Include="Models\DetailPrize\SixthPrize.cs" />
+    <Compile Include="Models\DetailPrize\SpecialPrize.cs" />
+    <Compile Include="Models\DetailPrize\ThirdPrize.cs" />
     <Compile Include="Models\ResponsePrize.cs" />
     <Compile Include="Models\ResponseLocationPrize.cs" />
     <Compile Include="Models\ResponseStatiscal.cs" />
@@ -279,6 +288,7 @@
     <Content Include="Views\Home\_PartialThongKe.cshtml" />
     <Content Include="Views\Home\SXMN_TachCuoi.cshtml" />
     <Content Include="Views\Home\HomeHome.cshtml" />
+    <Content Include="Views\Home\EditPrize.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
