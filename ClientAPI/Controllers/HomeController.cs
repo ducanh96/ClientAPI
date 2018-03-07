@@ -538,8 +538,8 @@ namespace ClientAPI.Controllers
             return View();
 
         }
-        [HttpPost]
-        public ActionResult Login(string username,string pass)
+        [HttpGet]
+        public ActionResult Login()
         {
             return View();
         }

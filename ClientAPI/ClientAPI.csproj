@@ -291,6 +291,7 @@
     <Content Include="Views\Home\EditPrize.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\NotFound.cshtml" />
+    <Content Include="Views\Home\CreatePrize.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
